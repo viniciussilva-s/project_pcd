@@ -42,10 +42,16 @@ body{
     font-size: 1.6rem;
 }
 
-section.bg-custom-green{
-    background-color: #1abc9c;
+section{
     padding: 6rem 0 ;
 }
+section.bg-custom-white{
+    background-color: #fff;
+}
+section.bg-custom-green{
+    background-color: #1abc9c;
+}
+
 .featured-image{
     text-align: center;
 }
@@ -56,31 +62,86 @@ section.bg-custom-green{
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
+}
+.color-blue{
+    color: var(--azul);
 }
 .line-star::before,.line-star::after{
     content: "";
     border-top: 5px solid #fff;
     border-radius: 10px;
-    width: 6rem;
+    width: 7rem;
     height: 5px;
     color: transparent;
     position: absolute;
     top: 50%;
     bottom: 0;
 }
+.line-star-blue::before,.line-star-blue::after{
+    border-top-color: var(--azul) ;
+}
 .line-star::before{
-    left: 0;
+    /* left: 0; */
+    margin-left: auto;
+    margin-right: 13rem;
 }
 .line-star::after{
-    right: 0;
+    /* right: 0; */
+    margin-right: auto;
+    margin-left: 13rem;
 }
 .line-star{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     display: flex;
     justify-content: space-around;
     position: relative;
     /* background-color: #000; */
+}
+.line-star-blue{
+    color: var(--azul);
+}
+.card-port{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-port:hover{
+    background-color: #1abc9c;
+    z-index: 9;
+}
+.card-port:nth-child(odd):hover{
+    background-color: #1abc9c;
+}
+.card-port:nth-child(even):hover{
+    background-color: #001F3F;
+}
+.card-port:nth-child(3n):hover{
+    background-color: #3A6D8C;
+}
+.card-port:nth-child(4n):hover{
+    background-color: #6A9AB0;
+}
+.card-port:nth-child(5n):hover{
+    background-color: #EAD8B1;
+}
+.card-port:nth-child(6n):hover{
+    background-color: #384B70;
+}
+
+.card-port:hover .card-port-img{
+    opacity: .1;
+    z-index: -1;
+}
+.card-port i {
+    position: absolute;
+    font-size: 5rem;
+    color: #fff;
+    opacity: 0;
+}
+.card-port:hover i{
+    opacity: 1;
 }
