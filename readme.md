@@ -22,3 +22,5 @@ Esse repo. tem o interesse em aux. os alunos no desenvolvimento FrontEnd (HTML +
 - CDN documentação [CDN.JS](https://cdnjs.com/libraries/bootstrap)
 
 - MarkDown online [Stack edit](https://stackedit.io/app#)
+
+- Projeto utilizado como ex. [Start Bootstrap](https://startbootstrap.com/previews/freelancer)
