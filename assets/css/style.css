@@ -1,10 +1,21 @@
 :root{
     --verde: #1abc9c;
+    --verde-escuro: #15967d; 
     --azul: #2c3e50;
 }
 .btn-primary{
     /* --bs-btn-bg: #2c3e50 !important; */
     background-color: #2c3e50 !important;
+}
+.btn-second{
+    background-color: var(--verde);
+    border: var(--verde-escuro);
+    color: #FCFAEE;
+}
+.btn-second:hover{
+    background-color: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+    color:#FCFAEE ;
 }
 body{
     background-color: #fff;
@@ -98,7 +109,7 @@ section.bg-custom-green{
     display: flex;
     justify-content: space-around;
     position: relative;
-    /* background-color: #000; */
+    margin: 1.25rem 0 1.5rem;/* background-color: #000   ; */
 }
 .line-star-blue{
     color: var(--azul);
@@ -108,34 +119,24 @@ section.bg-custom-green{
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 25rem;
+    margin: 0 auto;
 }
+.card-port.card-port-not-hover{
+    max-width: fit-content;
+}
+
 .card-port:hover{
     background-color: #1abc9c;
+    border-radius: 15px;
     z-index: 9;
-}
-.card-port:nth-child(odd):hover{
-    background-color: #1abc9c;
-}
-.card-port:nth-child(even):hover{
-    background-color: #001F3F;
-}
-.card-port:nth-child(3n):hover{
-    background-color: #3A6D8C;
-}
-.card-port:nth-child(4n):hover{
-    background-color: #6A9AB0;
-}
-.card-port:nth-child(5n):hover{
-    background-color: #EAD8B1;
-}
-.card-port:nth-child(6n):hover{
-    background-color: #384B70;
 }
 
 .card-port:hover .card-port-img{
     opacity: .1;
     z-index: -1;
 }
+
 .card-port i {
     position: absolute;
     font-size: 5rem;
@@ -144,4 +145,21 @@ section.bg-custom-green{
 }
 .card-port:hover i{
     opacity: 1;
+}
+.card-port.card-port-not-hover:hover{
+    background-color: transparent;
+    z-index: 0;
+}
+.card-port.card-port-not-hover:hover .card-port-img{
+    opacity: 1;
+    z-index: 1;
+}
+.card-port.card-port-not-hover:hover i{
+    opacity: 0;
+}
+.card-port.card-port-not-hover:hover{
+    background-color: transparent;
+}
+.card-port .card-port-img img{
+    border-radius: 15px;
 }
