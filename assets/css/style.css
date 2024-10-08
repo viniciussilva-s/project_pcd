@@ -163,3 +163,31 @@ section.bg-custom-green{
 .card-port .card-port-img img{
     border-radius: 15px;
 }
+
+#about-section p{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+#about-section .btn-outline-light{
+    font-weight: 500;
+    font-size: 22px;
+    border: 2px solid #FCFAEE;
+}
+
+#about-section .btn-outline-light:hover{
+    background-color: #FCFAEE;
+    color: #2c3e50;
+    
+}
+.form-floating>label{
+    top: -.6rem;
+}
+.form-floating>.form-control:not(:placeholder-shown)~label{
+    transform: scale(.85) translateY(-1.1rem) translateX(1.05rem);
+}
+.form-floating>.form-control:focus~label{
+    transform: scale(.85) translateY(-0.7rem) translateX(0.75rem);
+}
+/* .form-floating>.form-control:focus~label::after{ */
+    /* background-color: transparent; */
+/* } */
