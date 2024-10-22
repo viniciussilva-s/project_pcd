@@ -235,6 +235,25 @@
         </form>
       </div>
     </section>
+
+    <section id="video-teste" class="bg-custom-green">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls>
+              <source>
+            </video>
+            </div>
+            <div class="col-6">
+              <iframe width="500" height="450" src="assets/mov_bbb.mp4"></iframe>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
     <div class="modal fade" id="modalViewPortfolio" tabindex="-1" aria-labelledby="modalViewPortfolioLabel"
       aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -356,6 +375,32 @@
       }
 
     })
+
+     var navbarShrink = function () {
+        const navbarCollapsible = document.body.querySelector('.navbar');
+        if (!navbarCollapsible) {
+            return;
+        }
+        if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('fixed-top')
+        } else {
+            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('fixed-top')
+        }
+
+    };
+    navbarShrink();
+    document.addEventListener('scroll', navbarShrink);
+
+    const mainNav = document.body.querySelector('.navbar');
+    if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '.navbar',
+            rootMargin: '0px 0px -40%',
+        });
+    };
+
   </script>
 </body>
 
